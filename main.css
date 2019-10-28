@@ -6,3 +6,23 @@
   opacity: 1;
   transition: opacity 1s;
 }
+
+body {
+  background-color: #f1f0f0;
+}
+span {
+  font-weight:bold;
+}
+#boiling-temp {
+  color: red;
+}
+#freezing-temp {
+  color:blue;
+}
+#water-temp {
+  color:green;
+}
+#good-temp h2 {
+  color:orange;
+  font-size:1.2rem;
+}
