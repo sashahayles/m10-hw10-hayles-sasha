@@ -1,14 +1,15 @@
+//variables for messages
 const boilingTemp = document.getElementBy('boiling-temp');
 const freezingTemp = document.getElementBy('freezing-temp');
 const waterTemp = document.getElementBy('water-temp');
 const boilingMessage = document.getElementBy('boiling');
 const freezingMessage = document.getElementBy('frozen');
 const goodMessage = document.getElementBy('good-temp');
-
+//variables for temperatures
 const frozenNum =32;
 const boilingNum = 212;
 let waterNum = 50;
-
+// functions
 const showBoilingTemp = () => {
   boilingTemp.innerHTML = boilingNum;
 }
@@ -23,7 +24,7 @@ const showWaterTep = () => {
   waterTemp.innerHTML= waterNum;
 }
 showWaterTemp();
-
+//settime out
 const showWaterFine = () => {
   if (waterNum > boilingNum) {
     boilingMessage.classList.remove ('hide');
