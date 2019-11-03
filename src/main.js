@@ -1,26 +1,36 @@
-//boiling temp
-const boiling = document.getElementById('boiling-temp');
-const boilingtxt = document.createTextNode ("212");
-boiling.appendChild (boilingtxt);
+const boilingTemp = document.getElementBy('boiling-temp');
+const freezingTemp = document.getElementBy('freezing-temp');
+const waterTemp = document.getElementBy('water-temp');
+const boilingMessage = document.getElementBy('boiling');
+const freezingMessage = document.getElementBy('frozen');
+const goodMessage = document.getElementBy('good-temp');
 
-//freeze() => {
-  //boiling.appendChild (boilingtxt);
-  //document.appendChild (boiling);
-//  freeze();
-// }
+const frozenNum =32;
+const boilingNum = 212;
+let waterNum = 50;
 
-//freezing temp
-const freezing = document.getElementById ('freezing-temp');
-const freezingtxt = document.createTextNode ("32");
-freezing.appendChild (freezingtxt);
+const showBoilingTemp = () => {
+  boilingTemp.innerHTML = boilingNum;
+}
+showBoilingTemp();
 
-//random water temp
-let randomtemp = document.getElementById ('water-temp');
-let temptxt = document.createTextNode ("50");
-randomtemp.appendChild (temptxt);
+const showFreezingTemp = () => {
+  freezingTemp.innerHTML = frozenNum;
+}
+showFreezingTemp();
 
-let goodTemp = document.getElementById ('good-temp');
-setTimeout(()=> {
-  goodTemp.classList.remove('hide');
-  goodTemp.classList.add('show');
-}, 3000);
+const showWaterTep = () => {
+  waterTemp.innerHTML= waterNum;
+}
+showWaterTemp();
+
+const showWaterFine = () => {
+  if (waterNum > boilingNum) {
+    boilingMessage.classList.remove ('hide');
+  } else if (waterNum < frozenNum) {
+    freezingMessage.classList.remove ('hide');
+  } else {
+    goodMessage.classList.remove ('hide');
+  }
+}
+setTimeout(showWaterFine, 3000);
